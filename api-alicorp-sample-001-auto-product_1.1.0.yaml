@@ -1,0 +1,31 @@
+info:
+  title: API_Alicorp_Sample_001 auto product
+  name: api-alicorp-sample-001-auto-product
+  version: 1.1.0
+apis:
+  API_Alicorp_Sample_001:
+    $ref: >-
+      .\C:\Program Files\API
+      Designer\https:\apim-apic.cluster-cla-lzts-ccc03eca20d26e6ac64511f874a64b9b-0000.us-south.containers.appdomain.cloud\api\orgs\324a0996-cb3f-4766-b223-a163261f1a48\drafts\draft-apis\3ed4188d-c098-4854-b6d5-7c53bf9800ae
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: false
+    rate-limits:
+      hard-limit: true
+      value: 100/hour
+visibility:
+  view:
+    enabled: true
+    type: public
+    tags: []
+    orgs: []
+  subscribe:
+    enabled: true
+    type: authenticated
+    tags: []
+    orgs: []
+product: 1.0.0
