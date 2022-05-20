@@ -10,9 +10,23 @@ plans:
     description: Default Plan
     rate-limits:
       default:
+        value: 2/1minute
+        hard-limit: true
+  nuevo-plan:
+    title: NUEVO PLAN
+    rate-limits:
+      new memberships:
+        value: 10/1minute
+        hard-limit: false
+    burst-limits:
+      Default burst-limit:
+        value: 10/1second
+  otro:
+    title: OTRO
+    rate-limits:
+      Default rate-limit:
         value: 100/1hour
-    apis:
-      api-alicorp-sample-0011.0.0: {}
+        hard-limit: false
 apis:
   api-alicorp-sample-0011.0.0:
     $ref: .\api-alicorp-sample-001_1.0.0.yaml

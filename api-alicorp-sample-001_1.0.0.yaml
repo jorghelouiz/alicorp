@@ -35,7 +35,7 @@ x-ibm-configuration:
             values: []
           inject-proxy-headers: true
 paths:
-  /:
+  /helloworld:
     get:
       responses:
         '200':
@@ -98,5 +98,13 @@ components:
       type: apiKey
       in: header
       name: X-IBM-Client-Id
+      x-key-type: client_id
+    secret-id:
+      type: apiKey
+      name: secret-id
+      x-key-type: client_secret
+      in: header
 security:
   - clientID: []
+  - secret-id: []
+    clientID: []
